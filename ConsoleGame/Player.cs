@@ -11,12 +11,16 @@ namespace ConsoleGame
         private string name;
         private float health;
         private float damage;
+        private int flasks;
+        private int flaskHealing;
 
-        public Player (string name, float health, float damage)
+        public Player (string name, float health, float damage, int flasks, int flaskHealing)
         {
             this.name = name;
             this.health = health;
-            this.damage = damage;  
+            this.damage = damage;
+            this.flasks = flasks;
+            this.flaskHealing = flaskHealing;
         }
 
         public string GetName()
@@ -34,10 +38,35 @@ namespace ConsoleGame
             return damage;
         }
 
-        public float SetHealth(float damage)
+        public int GetFlasks()
+        {
+            return flasks;
+        }
+
+        public int GetFlaskHealing()
+        {
+            if (flasks > 0)
+            {
+                return flaskHealing;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public void SetHealth(float damage)
         {
             health -= damage;
-            return health;
+        }
+
+        public void SetFlasks()
+        {
+            if (flasks > 0)
+            {
+               flasks -= 1;
+               health += flaskHealing;
+            }
         }
     }
 }

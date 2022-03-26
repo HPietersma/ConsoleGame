@@ -34,10 +34,9 @@ namespace ConsoleGame
             return damage;
         }
 
-        public float SetHealth(float damage)
+        public void SetHealth(float damage)
         {
             health -= damage;
-            return health;
         }
     }
 }
