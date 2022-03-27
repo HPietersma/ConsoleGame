@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame
 {
-    internal class Enemy
+    internal class Melee : superClasses.Enemy
     {
-        private string name;
-        private float health;
-        private float damage;
-
-        public Enemy (string name, float health, float damage)
+        public Melee (string name, float health, float damage) : base (name, health, damage)
         {
             this.name = name;
             this.health = health;   

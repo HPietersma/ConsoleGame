@@ -8,7 +8,7 @@ string playerInput;
 Console.WriteLine("Welcome, prepare to get rekt.");
 
 Player player1 = new Player("Hessel", 100, 10, 5, 30);
-Enemy enemy1 = new Enemy("enemy1", 50, 5);
+Melee enemy1 = new Melee("enemy1", 50, 5);
 
 
 
@@ -89,7 +89,7 @@ while (!run)
     {
         string deadEnemy = enemy1.GetName();
 
-        enemy1 = new Enemy("enemy2", 50, 5);
+        enemy1 = new Melee("enemy2", 50, 5);
 
         Console.Clear();
 
